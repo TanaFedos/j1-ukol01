@@ -15,6 +15,32 @@ public class HlavniProgram {
 
         namalujPrasatko(zofka);
 
+        zofka.turnLeft(135);
+        zofka.move(380);
+        zofka.turnLeft(90);
+        zofka.move(700);
+
+        zofka.penDown();
+        namalujSlunicko(zofka);
+        zofka.penUp();
+
+    }
+
+    private static void namalujSlunicko(Turtle zofka) {
+        for (int i = 0; i < 18; i++) {
+            zofka.turnRight(20);
+            zofka.move(15);
+        }
+        for (int i = 0; i < 18; i++) {
+            zofka.turnLeft(90);
+            zofka.move(20);
+            zofka.turnRight(180);
+            zofka.penUp();
+            zofka.move(20);
+            zofka.turnLeft(70);
+            zofka.move(15);
+            zofka.penDown();
+        }
     }
 
     private static void namalujPrasatko(Turtle zofka) {
