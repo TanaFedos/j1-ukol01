@@ -8,21 +8,46 @@ public class HlavniProgram {
         Turtle zofka = new Turtle();
 
         zofka.penUp();
-        zofka.turnRight(90);
-        zofka.move(250);
-        zofka.turnRight(90);
-        zofka.move(200);
+        zofka.turnRight(180);
+        zofka.move(300);
+//        zofka.turnRight(90);
+//        zofka.move(200);
 
         namalujPrasatko(zofka);
 
         zofka.turnLeft(135);
-        zofka.move(380);
+        zofka.move(430);
         zofka.turnLeft(90);
-        zofka.move(700);
+        zofka.move(450);
 
         zofka.penDown();
         namalujSlunicko(zofka);
         zofka.penUp();
+
+
+        zofka.turnLeft(90);
+        zofka.move(100);
+        zofka.turnRight(90);
+        zofka.move(50);
+
+        for (int i = 0; i < 5; i++) {
+            namalujDomecek(zofka);
+            zofka.penUp();
+            zofka.turnRight(90);
+            zofka.move(300);
+            zofka.turnRight(180);
+        }
+
+        zofka.move(200);
+        zofka.turnLeft(90);
+        zofka.move(250);
+        zofka.turnRight(90);
+        namalujDomecek(zofka);
+        zofka.penUp();
+        zofka.turnLeft(90);
+        zofka.move(700);
+        namalujDomecek(zofka);
+
 
     }
 
@@ -44,6 +69,25 @@ public class HlavniProgram {
     }
 
     private static void namalujPrasatko(Turtle zofka) {
+        namalujDomecek(zofka);
+
+        trouhelnik(zofka);
+
+        zofka.move(170);
+        zofka.turnRight(180);
+        zofka.penDown();
+
+        trouhelnik(zofka);
+
+        zofka.turnLeft(90);
+        zofka.move(100);
+        zofka.turnRight(135);
+        zofka.penDown();
+        zofka.move(35);
+        zofka.penUp();
+    }
+
+    private static void namalujDomecek(Turtle zofka) {
         zofka.penDown();
         zofka.move(100);
         zofka.turnRight(135);
@@ -51,34 +95,19 @@ public class HlavniProgram {
         zofka.turnRight(90);
         zofka.move(70);
         zofka.turnRight(45);
-        zofka.move(200);
+        zofka.move(170);
         zofka.turnRight(90);
         zofka.move(100);
         zofka.turnRight(90);
-        zofka.move(200);
-
-        trouhelnik(zofka);
-
-        zofka.move(200);
-        zofka.turnRight(180);
-        zofka.penDown();
-
-        trouhelnik(zofka);
-
-        zofka.turnLeft(90);
-        zofka.move(105);
-        zofka.turnRight(135);
-        zofka.penDown();
-        zofka.move(55);
-        zofka.penUp();
+        zofka.move(170);
     }
 
     private static void trouhelnik(Turtle zofka) {
         zofka.turnLeft(45);
-        zofka.move(35);
+        zofka.move(30);
         zofka.turnLeft(135);
         zofka.penUp();
-        zofka.move(45);
+        zofka.move(40);
         zofka.penDown();
         zofka.turnLeft(135);
         zofka.move(30);
